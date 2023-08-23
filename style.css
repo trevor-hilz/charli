@@ -1,0 +1,9 @@
+body {
+    background-color: lightblue;
+}
+
+#title {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
