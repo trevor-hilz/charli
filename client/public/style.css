@@ -2,7 +2,28 @@ body,
 html {
   height: 100%;
   margin: 0;
-  background-color: black;
+}
+body::before {
+  background-image: url('../src/assets/synapses.png');
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(6px);
+  z-index: -1;
+}
+button {
+  background-color: rgb(255, 136, 0);
+  border: none;
+  border-radius: 6px;
+  padding: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255, 72, 0);
 }
 
 .wrapper {
@@ -48,4 +69,44 @@ html {
   height: 50px;
   background-color: rgb(22 0 0 / 50%);
   color: grey;
+}
+
+.dropbtn {
+  background-color: #3498db;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn-hover {
+  background-color: #2980b9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(a, 0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
 }
