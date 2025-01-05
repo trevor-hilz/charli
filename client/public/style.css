@@ -11,6 +11,10 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   filter: blur(6px);
   z-index: -1;
 }
@@ -26,13 +30,15 @@ button:hover {
   background-color: rgb(255, 72, 0);
 }
 
+/* background color is #0a0024 */
+
 .wrapper {
   min-height: 100vh;
   max-width: 960px;
   margin-inline: auto;
   padding-left: 10px;
   padding-right: 10px;
-  background: #0a0024;
+  background: #050011;
   color: #d3d3d3;
 }
 
