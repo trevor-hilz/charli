@@ -2,7 +2,7 @@ import React from 'react';
 
 const Buttons = () => {
   return (
-    <div>
+    <div className='buttons'>
       <button>Home</button>
       <button>Input Info</button>
       <button>Review Data</button>

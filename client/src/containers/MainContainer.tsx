@@ -7,10 +7,12 @@ import Title from '../components/Title';
 const MainContainer = () => {
   return (
     <div>
-      <Header />
-      <Title />
-      <Patient />
-      <Footer />
+      <div>
+        <Header />
+        <Title />
+        <Patient />
+        <Footer />
+      </div>
     </div>
   );
 };
