@@ -1,9 +1,32 @@
-body {
-    background-color: lightblue;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: black;
 }
 
-#title {
-    display: flex;
-    margin: auto;
-    justify-content: center;
+.wrapper {
+  min-height: 100vh;
+  max-width: 960px;
+  margin-inline: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #0a0024;
+  color: #d3d3d3;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+}
+
+.logo {
+  width: 40%;
+  border-radius: 50%;
 }

@@ -1,7 +1,12 @@
 import React from 'react';
+import MainContainer from './containers/MainContainer';
 
 const App = () => {
-  return <div>'Hello World of Charli in React!';</div>;
+  return (
+    <div className='wrapper'>
+      <MainContainer />
+    </div>
+  );
 };
 
 export default App;
