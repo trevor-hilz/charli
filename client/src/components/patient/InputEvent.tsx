@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EventInput = () => {
+const InputEvent = () => {
   return (
     <div>
       <button onClick={() => 'myFunction()'} className='dropbtn'>
@@ -14,4 +14,4 @@ const EventInput = () => {
   );
 };
 
-export default EventInput;
+export default InputEvent;
