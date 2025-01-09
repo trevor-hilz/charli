@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Share = () => {
-    return <div>Share!</div>
+    return <div className='patientDisplay'>Share!</div>
 }
 
 export default Share;

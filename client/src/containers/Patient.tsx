@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {JSX, useEffect, useState} from 'react';
 import Buttons from '../components/Buttons';
 import InputEvent from '../components/patient/InputEvent';
 import InputMedication from '../components/patient/InputMedication'
@@ -7,18 +7,29 @@ import Share from '../components/patient/Share';
 import Settings from '../components/patient/Settings';
 
 
+
 const Patient = () => {
-  const [usePatient, setPatient] = useState("");
   // write react state changes here
   // default needs to be the input info button / data
+  const [usePatient, setPatient] = useState<string>('reviewData');
+  const changeDisplay = (value: string) => {
+    console.log(value);
+    setPatient(value);
+  }
+
+  const displays: {[key: string]: JSX.Element} = {
+    inputEvent: <InputEvent />,
+    inputMedication: <InputMedication />,
+    reviewData: <ReviewData />,
+    settings: <Settings />,
+    share: <Share />,
+  }
+
   return (
     <div>
-      <Buttons />
-      <InputEvent />
-      <InputMedication />
-      <ReviewData />
-      <Share />
-      <Settings />
+      {/* <p>{usePatient}</p> */}
+      <Buttons changeDisplay = {changeDisplay}/>
+      {displays[usePatient] || displays['reviewData']}
     </div>
   );
 };

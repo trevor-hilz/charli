@@ -116,3 +116,9 @@ button:hover {
 .show {
   display: block;
 }
+
+.patientDisplay {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}

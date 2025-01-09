@@ -1,4 +1,4 @@
-const events = [
+const seizures = [
   'Focal Aware',
   'Focal Impaired',
   'Focal to Bilateral Tonic-Clonic',
@@ -9,3 +9,5 @@ const events = [
   'Atonic',
   'Myoclonic',
 ];
+
+export default seizures;

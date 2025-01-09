@@ -1,8 +1,6 @@
-import React from 'react';
-
 const InputEvent = () => {
   return (
-    <div>
+    <div className='patientDisplay'>
       <button onClick={() => 'myFunction()'} className='dropbtn'>
         Dropdown
       </button>

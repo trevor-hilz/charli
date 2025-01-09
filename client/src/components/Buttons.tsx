@@ -1,16 +1,16 @@
 import React from 'react';
+interface ButtonsProps {
+  changeDisplay: (value: string) => void;
+}
 
-const Buttons = () => {
-  const changeDisplay = (value) => {
-    return console.log('button clicked')
-  }
+const Buttons: React.FC<ButtonsProps> = ({changeDisplay}) => {
   return (
     <div className='buttons'>
-      <button onClick={changeDisplay(this.value)} value='InputEvent'>Input Event</button>
-      <button onClick={changeDisplay} value='InputMedication'>Input Medication</button>
-      <button onClick={changeDisplay} value='ReviewData'>Review Data</button>
-      <button onClick={changeDisplay} value='Share'>Share</button>
-      <button onClick={changeDisplay} value='Settings'>Settings</button>
+      <button id='inputEventBtn' value='inputEvent' onClick={(e) => changeDisplay(e.currentTarget.value)}>Input Event</button>
+      <button id='inputMedicationBtn' value='inputMedication' onClick={(e) => changeDisplay(e.currentTarget.value)}>Input Medication</button>
+      <button id='reviewDataBtn' value='reviewData' onClick={(e) => changeDisplay(e.currentTarget.value)}>Review Data</button>
+      <button id='shareBtn' value='share' onClick={(e) => changeDisplay(e.currentTarget.value)}>Share</button>
+      <button id='settingsBtn' value='settings' onClick={(e) => changeDisplay(e.currentTarget.value)}>Settings</button>
     </div>
   );
 };

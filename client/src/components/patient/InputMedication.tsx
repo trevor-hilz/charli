@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InputMedication = () => {
-    return <div>InputMedication!</div>
+    return <div className='patientDisplay'>InputMedication!</div>
 }
 
 export default InputMedication;
