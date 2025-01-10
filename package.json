@@ -39,6 +39,8 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
-    "@sequelize/postgres": "^7.0.0-alpha.43"
+    "@sequelize/postgres": "^7.0.0-alpha.43",
+    "prop-types": "^15.8.1",
+    "react-datepicker": "^7.6.0"
   }
 }
