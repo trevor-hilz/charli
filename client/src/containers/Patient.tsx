@@ -27,7 +27,6 @@ const Patient = () => {
 
   return (
     <div>
-      {/* <p>{usePatient}</p> */}
       <Buttons changeDisplay = {changeDisplay}/>
       {displays[usePatient] || displays['reviewData']}
     </div>
