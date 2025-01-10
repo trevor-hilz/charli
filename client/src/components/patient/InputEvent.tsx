@@ -8,6 +8,13 @@ import 'react-datepicker/dist/react-datepicker.css';
 const InputEvent = () => {
   const [startDate, setStartDate] = useState<Date | null>(new Date());
 
+  const eventObj = {
+    seizure: 'absence',
+  };
+  const eventSubmit = (eventObj: object) => {
+    return console.log(eventObj);
+  };
+
   return (
     <div className='patientDisplay'>
       <select id='eventOption'>
@@ -40,7 +47,10 @@ const InputEvent = () => {
         <div>Emergency Room Visited</div>
         <input type='checkbox'></input>
       </div>
-      <button>Submit New Entry</button>
+
+      <button onClick={(eventObj) => eventSubmit(eventObj)}>
+        Submit New Entry
+      </button>
     </div>
   );
 };
