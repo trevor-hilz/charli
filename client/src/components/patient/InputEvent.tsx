@@ -8,11 +8,16 @@ import 'react-datepicker/dist/react-datepicker.css';
 const InputEvent = () => {
   const [startDate, setStartDate] = useState<Date | null>(new Date());
 
-  const eventObj = {
-    seizure: 'absence',
-  };
-  const eventSubmit = (eventObj: object) => {
-    return console.log(eventObj);
+  const gatherInfo = () => {
+    const seizurePick = document.getElementById('eventOption');
+    // const seizureValue = seizurePick?.value;
+
+    const eventObj = {
+      seizure: seizurePick,
+    };
+    const eventSubmit = (eventObj: object) => {
+      return console.log(seizurePick, eventObj);
+    };
   };
 
   return (
@@ -48,9 +53,7 @@ const InputEvent = () => {
         <input type='checkbox'></input>
       </div>
 
-      <button onClick={(eventObj) => eventSubmit(eventObj)}>
-        Submit New Entry
-      </button>
+      <button onClick={() => gatherInfo()}>Submit New Entry</button>
     </div>
   );
 };
