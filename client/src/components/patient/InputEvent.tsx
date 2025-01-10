@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Seizures from '../../utils/EventInput';
+import Seizures from '../../utils/Seizures';
 import DatePicker from 'react-datepicker';
 import Moment from 'moment';
 

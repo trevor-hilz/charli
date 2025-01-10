@@ -1,4 +1,4 @@
-const seizures = [
+const Seizures = [
   'Focal Aware',
   'Focal Impaired',
   'Focal to Bilateral Tonic-Clonic',
@@ -10,4 +10,4 @@ const seizures = [
   'Myoclonic',
 ];
 
-export default seizures;
+export default Seizures;
