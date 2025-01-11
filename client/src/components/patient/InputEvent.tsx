@@ -7,16 +7,16 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const InputEvent = () => {
   const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [seizure, setSeizure] = useState<string>('');
+  const [eventDate, setEventDate] = useState<Date>();
+  const [minutes, setMinutes] = useState<number>();
+  const [seconds, setSeconds] = useState<number>();
+  const [eDrug, setEDrug] = useState<boolean>(false);
+  const [erVisit, setERVisit] = useState<boolean>(false);
 
   const gatherInfo = () => {
-    const seizurePick = document.getElementById('eventOption');
-    // const seizureValue = seizurePick?.value;
-
-    const eventObj = {
-      seizure: seizurePick,
-    };
     const eventSubmit = (eventObj: object) => {
-      return console.log(seizurePick, eventObj);
+      return console.log('eventSubmit', seizure, eventObj);
     };
   };
 
@@ -31,6 +31,7 @@ const InputEvent = () => {
             {seizure}
           </option>
         ))}
+        setSeizure = {seizure}
       </select>
       <DatePicker
         maxDate={Moment().toDate()}
