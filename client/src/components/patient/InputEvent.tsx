@@ -5,7 +5,11 @@ import Moment from 'moment';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-const InputEvent = () => {
+const InputEvent: React.FC = () => {
+  interface EventObj {
+    seizure: string;
+    // Add other fields as necessary, e.g., date, minutes, etc.
+  }
   const [startDate, setStartDate] = useState<Date | null>(new Date());
   const [seizure, setSeizure] = useState<string>('');
   const [eventDate, setEventDate] = useState<Date>();
@@ -13,7 +17,23 @@ const InputEvent = () => {
   const [seconds, setSeconds] = useState<number>();
   const [eDrug, setEDrug] = useState<boolean>(false);
   const [erVisit, setERVisit] = useState<boolean>(false);
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault(); // Prevent page reload
 
+    // Construct the event object
+    const eventObj: EventObj = {
+      seizure,
+      // Include other fields as necessary
+      // date: startDate,
+      // minutes,
+      // seconds,
+      // eDrug,
+      // erVisit,
+    };
+
+    // Log the event object (for debugging)
+    console.log('Submitting Event:', eventObj);
+  };
   const gatherInfo = () => {
     const eventSubmit = (eventObj: object) => {
       return console.log('eventSubmit', seizure, eventObj);
@@ -22,6 +42,28 @@ const InputEvent = () => {
 
   return (
     <div className='patientDisplay'>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor='eventOption'>Select an Event:</label>
+        <select
+          id='eventOption'
+          value={seizure}
+          onChange={(e) => setSeizure(e.target.value)}
+          required // Makes the field mandatory
+        >
+          <option value='' disabled>
+            Select an Event
+          </option>
+          {Seizures.map((seizureOption, index) => (
+            <option key={index} value={seizureOption}>
+              {seizureOption}
+            </option>
+          ))}
+        </select>
+
+        {/* Add other form fields here, e.g., date picker, minutes, seconds, checkboxes, etc. */}
+
+        <button type='submit'>Submit Event</button>
+      </form>
       <select id='eventOption'>
         <option value='' disabled selected>
           Select an Event
